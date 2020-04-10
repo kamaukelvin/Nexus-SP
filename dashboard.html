@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Nexus SP-Dashboard</title>
+    <meta name="description" content="A responsive bootstrap 4 admin dashboard template by hencework" />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+	
+	<!-- Morris Charts CSS -->
+    <link href="vendors/morris.js/morris.css" rel="stylesheet" type="text/css" />
+	
+    <!-- Toggles CSS -->
+    <link href="vendors/jquery-toggles/css/toggles.css" rel="stylesheet" type="text/css">
+    <link href="vendors/jquery-toggles/css/themes/toggles-light.css" rel="stylesheet" type="text/css">
+
+	
+    <!-- Custom CSS -->
+    <link href="dist/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    
+	
+	<!-- HK Wrapper -->
+	<div class="hk-wrapper hk-alt-nav">
+
+        <!-- Top Navbar -->
+        <nav class="navbar navbar-expand-xl navbar-light fixed-top hk-navbar hk-navbar-alt">
+            <a class="navbar-toggle-btn nav-link-hover navbar-toggler" href="javascript:void(0);" data-toggle="collapse" data-target="#navbarCollapseAlt" aria-controls="navbarCollapseAlt" aria-expanded="false" aria-label="Toggle navigation"><span class="feather-icon"><i data-feather="menu"></i></span></a>
+            <a class="navbar-brand font-weight-700" href="login.html">
+                Nexus<span class="text-secondary">Insurance</span>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapseAlt">
+                <ul class="navbar-nav">
+                    <li class="nav-item show-on-hover active">
+                        <a class="nav-link " href="#">
+								Dashboard
+							</a>
+                    </li>
+                    <li class="nav-item  show-on-hover">
+                        <a class="nav-link  href="#">
+								My Profile
+							</a>
+                    </li>
+                    <li class="nav-item dropdown show-on-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Users
+							</a>
+                        <div class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <div class="sub-dropdown-menu show-on-hover">
+                                <a href="#" class=" dropdown-item">option</a>
+                                <a href="#" class=" dropdown-item">Option</a>
+                                <a href="#" class=" dropdown-item">Option</a>
+                                <a href="#" class=" dropdown-item">Option</a>
+                           
+                            </div>
+                        </div>       
+                    </li>
+                    <li class="nav-item dropdown show-on-hover">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Requests
+							</a>
+                        <div class="dropdown-menu" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                            <div class="sub-dropdown-menu show-on-hover">
+                                <a href="requests-pending.html" class=" dropdown-item">Pending</a>
+                                <a href="requests-progress.html" class=" dropdown-item">In Progress</a>
+                               
+                           
+                            </div>
+                        </div>       
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" >Account</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">KYC</a>
+                    </li>
+                </ul>
+                <form class="navbar-search-alt">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><span class="feather-icon"><i data-feather="search"></i></span></span>
+                        </div>
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+            <ul class="navbar-nav hk-navbar-content">
+                <li class="nav-item dropdown dropdown-notifications">
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="feather-icon"><i data-feather="bell"></i></span><span class="badge-wrap"><span class="badge badge-primary badge-indicator badge-indicator-sm badge-pill pulse"></span></span></a>
+                    <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                        <h6 class="dropdown-header">Notifications <a href="javascript:void(0);" class="">View all</a></h6>
+                        <div class="notifications-nicescroll-bar">
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text"><span class="text-dark text-capitalize">Evie Ono</span> accepted your invitation to join the team</div>
+                                            <div class="notifications-time">12m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">New message received from <span class="text-dark text-capitalize">Misuko Heid</span></div>
+                                            <div class="notifications-time">1h</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text avatar-text-primary rounded-circle">
+													<span class="initial-wrap"><span><i class="zmdi zmdi-account font-18"></i></span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">You have a follow up with<span class="text-dark text-capitalize"> Marvin head</span> on <span class="text-dark text-capitalize">friday, dec 19</span> at <span class="text-dark">10.00 am</span></div>
+                                            <div class="notifications-time">2d</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text avatar-text-success rounded-circle">
+													<span class="initial-wrap"><span>A</span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">Application of <span class="text-dark text-capitalize">Sarah Williams</span> is waiting for your approval</div>
+                                            <div class="notifications-time">1w</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0);" class="dropdown-item">
+                                <div class="media">
+                                    <div class="media-img-wrap">
+                                        <div class="avatar avatar-sm">
+                                            <span class="avatar-text avatar-text-warning rounded-circle">
+													<span class="initial-wrap"><span><i class="zmdi zmdi-notifications font-18"></i></span></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <div>
+                                            <div class="notifications-text">Last 2 days left for the project</div>
+                                            <div class="notifications-time">15d</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown dropdown-authentication">
+                    <a class="nav-link dropdown-toggle no-caret" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media">
+                            <div class="media-img-wrap">
+                                <div class="avatar">
+                                    <img src="dist/img/avatar12.jpg" alt="user" class="avatar-img rounded-circle">
+                                </div>
+                                <span class="badge badge-success badge-indicator"></span>
+                            </div>
+                            <div class="media-body">
+                                <span>Robert Njoroge<i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" data-dropdown-in="flipInX" data-dropdown-out="flipOutX">
+                        <a class="dropdown-item" href="profile.html"><i class="dropdown-icon zmdi zmdi-account"></i><span>Profile</span></a>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-card"></i><span>My balance</span></a>
+                        <a class="dropdown-item" href="inbox.html"><i class="dropdown-icon zmdi zmdi-email"></i><span>Inbox</span></a>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-settings"></i><span>Settings</span></a>
+                        <div class="dropdown-divider"></div>
+                        <div class="sub-dropdown-menu show-on-hover">
+                            <a href="#" class="dropdown-toggle dropdown-item no-caret"><i class="zmdi zmdi-check text-success"></i>Online</a>
+                            <div class="dropdown-menu open-left-side">
+                                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-check text-success"></i><span>Online</span></a>
+                                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-circle-o text-warning"></i><span>Busy</span></a>
+                                <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-minus-circle-outline text-danger"></i><span>Offline</span></a>
+                            </div>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#"><i class="dropdown-icon zmdi zmdi-power"></i><span>Log out</span></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /Top Navbar -->
+
+        <!-- Main Content -->
+        <div class="hk-pg-wrapper">
+			<!-- Container -->
+            <div class="container mt-xl-50 mt-sm-30 mt-15">
+                <!-- Title -->
+                <div class="hk-pg-header">
+                    <div>
+						<h2 class="hk-pg-title font-weight-600 mb-10">Dashboard</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quae? Molestiae eveniet temporibus quod.</p>
+                    </div>
+                </div>
+                <!-- /Title -->
+
+                <!-- Row -->
+                <div class="row">
+                    <div class="col-xl-12">
+						<div class="hk-row">
+							<div class="col-md-4">
+								<div class="card card-sm">
+									<div class="card-body">
+										<div class="d-flex align-items-center justify-content-between">
+											<div>
+												<span class="d-block font-12 font-weight-500 text-dark text-uppercase mb-5">Pending</span>
+												<span class="d-block display-6 font-weight-400 text-dark">13</span>
+											</div>
+											<div>
+												<div id="sparkline_4"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card card-sm">
+									<div class="card-body">
+										<div class="d-flex align-items-center justify-content-between">
+											<div>
+												<span class="d-block font-12 font-weight-500 text-dark text-uppercase mb-5">Completed</span>
+												<span class="d-block display-6 font-weight-400 text-dark">4</span>
+											</div>
+											<div>
+												<div id="sparkline_5"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="card card-sm">
+									<div class="card-body">
+										<div class="d-flex align-items-center justify-content-between">
+											<div>
+												<span class="d-block font-12 font-weight-500 text-dark text-uppercase mb-5">In Progress</span>
+												<span class="d-block display-6 font-weight-400 text-dark">10</span>
+											</div>
+											<div>
+												<span id="pie_chart_1" class="d-flex easy-pie-chart" data-percent="91">
+													<span class="percent head-font">91</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="chatapp-wrap">
+                                            <div class="chatapp-left">
+                                                <header class="card-header card-header-action">
+                                                    <h6>Pending Requests</h6>
+                                                    <a href="javascript:void(0)" class="chat-compose">
+                                                        <span class="font-16">View all</span>
+                                                    </a>
+                                                </header>
+                                                <form role="search" class="chat-search">
+                                                    <div class="input-group">
+                                                        <div class="input-group-prepend">
+                                                            <span class="feather-icon"><i data-feather="search"></i></span>
+                                                        </div>
+                                                        <input type="text" class="form-control" placeholder="Search">
+                                                    </div>
+                                                </form>
+                                                <div class="chatapp-users-list">
+                                                    <div class="nicescroll-bar">
+                                                        <a href="javascript:void(0);" class="media">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar1.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">Sanlam Insurance</div>
+                                                                    <div class="user-last-chat">No one saves us but ourselves.</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">08/04/2020</div>
+                                                                   
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="chat-hr-wrap">
+                                                            <hr>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="media">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">Jubilee Insurance</div>
+                                                                    <div class="user-last-chat">Unity is strength </div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">08/04/2020</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="chat-hr-wrap">
+                                                            <hr>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="media">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar3.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">Raddison</div>
+                                                                    <div class="user-last-chat">Respect yourself if you would have</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">06/04/2020</div>
+                                                                   
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="chat-hr-wrap">
+                                                            <hr>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="media read-chat">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">UAP Insurance</div>
+                                                                    <div class="user-last-chat">OK that sounds perfect</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">11/03/2020</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="chat-hr-wrap">
+                                                            <hr>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="media read-chat">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">UAP Insurance</div>
+                                                                    <div class="user-last-chat">OK that sounds perfect</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">11/03/2020</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="chat-hr-wrap">
+                                                            <hr>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="media read-chat">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">UAP Insurance</div>
+                                                                    <div class="user-last-chat">OK that sounds perfect</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">11/03/2020</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                        <div class="chat-hr-wrap">
+                                                            <hr>
+                                                        </div>
+                                                        <a href="javascript:void(0);" class="media read-chat">
+                                                            <div class="media-img-wrap">
+                                                                <div class="avatar">
+                                                                    <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
+                                                                </div>
+                                                            </div>
+                                                            <div class="media-body">
+                                                                <div>
+                                                                    <div class="user-name">UAP Insurance</div>
+                                                                    <div class="user-last-chat">OK that sounds perfect</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div class="last-chat-time block">11/03/2020</div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                      
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card">
+                                <div class="card-header card-header-action">
+                                    <h6>Recent Activity</h6>
+                                    <div class="d-flex align-items-center card-action-wrap">
+                                        <div class="inline-block dropdown">
+                                            <a class="dropdown-toggle no-caret" data-toggle="dropdown" href="#" aria-expanded="false" role="button"><i class="ion ion-ios-more"></i></a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                                <a class="dropdown-item" href="#">Another action</a>
+                                                <a class="dropdown-item" href="#">Something else here</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">Separated link</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="user-activity user-activity-sm">
+                                        <div class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-xs">
+                                                    <img src="dist/img/avatar2.jpg" alt="user" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Laura Thompson</span><span class="pl-5">joined josh groben team.</span></span>
+                                                    <span class="d-block font-13">3 hours ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-xs">
+                                                    <img src="dist/img/avatar3.jpg" alt="user" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Meayme Fletcher</span><span class="pl-5">liked photos</span></span>
+                                                    <span class="d-block font-13 mb-10">6 hours ago</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock7.jpg" alt="Card image cap"></a>
+                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock11.jpg" alt="Card image cap"></a>
+                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock12.jpg" alt="Card image cap"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-xs">
+                                                    <span class="avatar-text avatar-text-info rounded-circle">
+                                                            <span class="initial-wrap"><span>B</span></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Billy Flowers</span><span class="pl-5">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text.</span></span>
+                                                    <span class="d-block font-13">3 days ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-xs">
+                                                    <img src="dist/img/avatar4.jpg" alt="user" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Morgan Freeman</span><span class="pl-5">joined josh groben team.</span></span>
+                                                    <span class="d-block font-13">3 hours ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-xs">
+                                                    <span class="avatar-text avatar-text-success rounded-circle">
+                                                            <span class="initial-wrap"><span>M</span></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Meayme Fletcher</span><span class="pl-5">liked photos</span></span>
+                                                    <span class="d-block font-13 mb-10">6 hours ago</span>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <a href="#" class="w-75p mr-10"><img class="card-img-top rounded" src="dist/img/gallery/mock1.jpg" alt="Card image cap"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-xs">
+                                                    <img src="dist/img/avatar6.jpg" alt="user" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <span class="d-block mb-5"><span class="font-weight-500 text-dark text-capitalize">Evie Ono</span><span class="pl-5">joined josh groben team.</span></span>
+                                                    <span class="d-block font-13">3 hours ago</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>  
+                        </div>
+                      <!-- Row -->
+                    </div>
+                </div>  
+			</div>
+            <!-- /Container -->
+			<!-- Footer -->
+            <div class="hk-footer-wrap container">
+                <footer class="footer">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <p>NexusInsurance © 2020</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <p class="d-inline-block">Follow us</p>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-facebook"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-twitter"></i></span></a>
+                            <a href="#" class="d-inline-block btn btn-icon btn-icon-only btn-indigo btn-icon-style-4"><span class="btn-icon-wrap"><i class="fa fa-google-plus"></i></span></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /Footer -->
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /HK Wrapper -->
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="dist/js/jquery.slimscroll.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="dist/js/dropdown-bootstrap-extended.js"></script>
+
+    <!-- FeatherIcons JavaScript -->
+    <script src="dist/js/feather.min.js"></script>
+
+    <!-- Toggles JavaScript -->
+    <script src="vendors/jquery-toggles/toggles.min.js"></script>
+    <script src="dist/js/toggle-data.js"></script>
+	
+	<!-- Counter Animation JavaScript -->
+	<script src="vendors/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="vendors/jquery.counterup/jquery.counterup.min.js"></script>
+	
+	<!-- Easy pie chart JS -->
+    <script src="vendors/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+	
+	<!-- Sparkline JavaScript -->
+    <script src="vendors/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+	
+	<!-- Morris Charts JavaScript -->
+    <script src="vendors/raphael/raphael.min.js"></script>
+    <script src="vendors/morris.js/morris.min.js"></script>
+	
+	<!-- Data Table JavaScript -->
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="dist/js/dataTables-data.js"></script>
+
+	<!-- EChartJS JavaScript -->
+    <script src="vendors/echarts/dist/echarts-en.min.js"></script>
+    
+	<!-- Peity JavaScript -->
+    <script src="vendors/peity/jquery.peity.min.js"></script>
+   
+    <!-- Init JavaScript -->
+    <script src="dist/js/init.js"></script>
+	<script src="dist/js/dashboard3-data.js"></script>
+	
+</body>
+
+</html>
